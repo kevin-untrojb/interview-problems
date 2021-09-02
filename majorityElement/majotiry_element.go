@@ -24,17 +24,17 @@ func TrivialMajorityElement(arr []int) int {
 	return -1
 }
 
-func SortedMajorityElement(arr []int) int{
+func SortedMajorityElement(arr []int) int {
 	count := 0
 	index := 0
 	n := len(arr)
 
 	sort.Ints(arr)
-	for i := 1; i < n; i++{
-		if arr[i]== arr[index]{
+	for i := 1; i < n; i++ {
+		if arr[i] == arr[index] {
 			count++
 		} else {
-			if count > n/2{
+			if count > n/2 {
 				return arr[index]
 			}
 			count = 0
@@ -44,17 +44,17 @@ func SortedMajorityElement(arr []int) int{
 	return -1
 }
 
-func HashMajorityElement(arr []int) int{
+func HashMajorityElement(arr []int) int {
 	n := len(arr)
 	m := make(map[int]int)
 	// completo el mapa con los y le sumo 1 al contador de variables
-	for i:= 0; i < n ; i++{
+	for i := 0; i < n; i++ {
 		m[arr[i]]++
 	}
 
 	// busco si existe un contador mayor a n/2
-	for i:= 0; i < n ; i++{
-		count ,ok := m[i]
+	for i := 0; i < n; i++ {
+		count, ok := m[i]
 		if ok && count > n/2 {
 			return arr[i]
 		}
@@ -62,18 +62,18 @@ func HashMajorityElement(arr []int) int{
 	return -1
 }
 
-func OptimalMajorityElement(arr []int) int{
+func OptimalMajorityElement(arr []int) int {
 	count := 1
 	index := 0
 	n := len(arr)
 	// busco el elemento que mas se repite en el arreglo
-	for i := 1; i < n; i++{
-		if arr[index] == arr[i]{
-			count ++
-		}else {
-			count --
+	for i := 1; i < n; i++ {
+		if arr[index] == arr[i] {
+			count++
+		} else {
+			count--
 		}
-		if count == 0{
+		if count == 0 {
 			count = 1
 			index = i
 		}
@@ -81,8 +81,8 @@ func OptimalMajorityElement(arr []int) int{
 
 	// analizo si se repite mas de n/2 veces
 	count = 0
-	for i := 0; i < n; i++{
-		if arr[index] == arr[i]{
+	for i := 0; i < n; i++ {
+		if arr[index] == arr[i] {
 			count++
 		}
 	}
@@ -91,4 +91,3 @@ func OptimalMajorityElement(arr []int) int{
 	}
 	return -1
 }
-

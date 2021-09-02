@@ -1,5 +1,7 @@
 package longestCommonSubsequence
 
+import "github.com/kevin-untrojb/interview-problems/utils"
+
 func longestCommonSubsequence(text1 string, text2 string) int {
 	s1 := len(text1)
 	s2 := len(text2)
@@ -13,18 +15,11 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 			if text1[i-1] == text2[j-1] {
 				opt[i][j] = opt[i-1][j-1] + 1
 			} else {
-				opt[i][j] = max(opt[i-1][j], opt[i][j-1])
+				opt[i][j] = utils.Max(opt[i-1][j], opt[i][j-1])
 			}
 
 		}
 	}
 
 	return opt[s1][s2]
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
