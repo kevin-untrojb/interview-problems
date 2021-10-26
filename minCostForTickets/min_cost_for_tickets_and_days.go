@@ -1,8 +1,9 @@
 package minCostForTickets
 
 import (
-	"github.com/kevin-untrojb/interview-problems/utils"
 	"math"
+
+	"github.com/kevin-untrojb/interview-problems/utils"
 )
 
 func MincostTicketsWithDaysDp(days []int, costs []int, cantDays []int) int {

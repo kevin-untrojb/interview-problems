@@ -1,8 +1,9 @@
 package maxPathThree
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSolutionWithOneElement(t *testing.T) {

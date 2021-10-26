@@ -1,8 +1,9 @@
 package coinChange
 
 import (
-	"github.com/kevin-untrojb/interview-problems/utils"
 	"math"
+
+	"github.com/kevin-untrojb/interview-problems/utils"
 )
 
 func coinChange(coins []int, amount int) int {

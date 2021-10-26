@@ -1,8 +1,9 @@
 package minCostForTickets
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMinCostTicketsBacktrack(t *testing.T) {
